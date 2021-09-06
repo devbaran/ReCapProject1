@@ -14,7 +14,24 @@ namespace _1Console
             //CarManagerTest();
             //CarManagerAddTest();
             //CarManagerTest2();
+            //RentalTest();
 
+        }
+
+        private static void RentalTest()
+        {
+            Rental rental1 = new Rental() { CarId = 1, CustomerId = 1 };
+
+            RentalManager rentalManager = new RentalManager(new EfRentalDal());
+            var result = rentalManager.Add(rental1);
+            if (result.Success == true)
+            {
+                Console.WriteLine(result.Message);
+            }
+            else
+            {
+                Console.WriteLine(result.Message);
+            }
         }
 
         private static void CarManagerTest2()

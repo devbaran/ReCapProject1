@@ -10,6 +10,8 @@ namespace Business.Constants
         public static string BrandNameInvalid="İsim geçersiz.";
         public static string MaintenanceTime="Sistem bakımda.";
         public static string BrandsListed="Markalar listelendi.";
-        internal static string DescriptionTooShort;
+        public static string DescriptionTooShort="Açıklama çok kısa!";
+        public static string RentDateInvalid="Kiralama tarihi geçersiz veya boş.";
+        public static string RentalAdded="Kiralama işlemi başarılı.";
     }
 }
