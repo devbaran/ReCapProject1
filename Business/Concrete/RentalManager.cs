@@ -36,7 +36,11 @@ namespace Business.Concrete
 
         public IDataResult<List<Rental>> GetAll()
         {
-            return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll());
+            if (DateTime.Now.Hour==23)
+            {
+                return new ErrorDataResult<List<Rental>>(Messages.MaintenanceTime);
+            }
+            return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll(), Messages.Success);
         }
 
         public IDataResult<Rental> GetById(int id)

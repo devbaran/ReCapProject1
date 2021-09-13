@@ -13,6 +13,6 @@ namespace Entities.Concrete
         public int CustomerId { get; set; }
         public DateTime? RentDate { get; set; } // soru işareti koymazsak null/boş değer OLAMAZ! , otomatik olarak 0001 olarak tarih oluşturur.
                                             // soru işareti koyunca null olabilir anlamına gelecektir...
-        public DateTime ReturnDate { get; set; }
+        public DateTime? ReturnDate { get; set; }
     }
 }

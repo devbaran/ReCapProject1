@@ -15,12 +15,23 @@ namespace _1Console
             //CarManagerAddTest();
             //CarManagerTest2();
             //RentalTest();
+            //CustomerManagerGetAll();
 
+        }
+
+        private static void CustomerManagerGetAll()
+        {
+            CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+            var result = customerManager.GetAll();
+            foreach (var customer in result.Data)
+            {
+                Console.WriteLine(customer.CompanyName);
+            }
         }
 
         private static void RentalTest()
         {
-            Rental rental1 = new Rental() { CarId = 1, CustomerId = 1 };
+            Rental rental1 = new Rental() { CarId = 1, CustomerId = 1,RentDate=DateTime.Now };
 
             RentalManager rentalManager = new RentalManager(new EfRentalDal());
             var result = rentalManager.Add(rental1);
