@@ -34,6 +34,9 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<UserManager>().As<IUserService>().SingleInstance();
             builder.RegisterType<EfUserDal>().As<IUserDal>().SingleInstance();
 
+            builder.RegisterType<CarImageManager>().As<ICarImageServices>().SingleInstance();
+            builder.RegisterType<EfCarImageDal>().As<ICarImageDal>().SingleInstance();
+
 
             //alt kısım git bak yukarıdakilerin köşeli parantezi varsa önce onu çağır diyor...
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();//çalışan uygulama içerisinde

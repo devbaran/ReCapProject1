@@ -16,5 +16,6 @@ namespace Business.Constants
         public static string RentalAdded="Kiralama işlemi başarılı.";
         public static string Success="Başarılı.";
         public static string Error="Hata.";
+        public static string LimitExceeded="Daha fazla görsel ekleyemezsiniz.";
     }
 }
