@@ -1,6 +1,7 @@
 ﻿using Entities.Concrete;
 using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Business.Constants
@@ -17,5 +18,6 @@ namespace Business.Constants
         public static string Success="Başarılı.";
         public static string Error="Hata.";
         public static string LimitExceeded="Daha fazla görsel ekleyemezsiniz.";
+        public static string AuthorizationDenied="Yetkiniz yok.";
     }
 }

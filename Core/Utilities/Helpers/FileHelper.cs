@@ -23,6 +23,7 @@ namespace Core.Utilities.Helpers
             }
             var extension = Path.GetExtension(formFile.FileName);
             var newFileName = Guid.NewGuid().ToString("N") + extension;
+            //The format parameter can be "N", "D", "B", "P", or "X". If format is null or an empty string (""), "D" is used.
 
             File.Move(sourcepath, directory + path + newFileName);
             return (path + newFileName).Replace("\\", "/");
